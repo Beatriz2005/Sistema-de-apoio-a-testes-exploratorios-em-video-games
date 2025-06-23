@@ -10,6 +10,17 @@
   <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
+
+<!-- Bandeiras de idioma fixadas no canto superior direito, fora da navbar -->
+<div style="position: fixed; top: 80px; right: 20px; z-index: 1050;">
+  <a th:href="@{''(lang=pt_BR)}">
+    <img alt="Português" th:src="@{/img/Brasil.gif}" style="width: 50px; margin-bottom: 5px;" />
+  </a>
+  <a th:href="@{''(lang=en_US)}">
+    <img alt="English" th:src="@{/img/EUA.gif}" style="width: 50px;" />
+  </a>
+</div>
+
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" th:href="@{/}">GTest</a>
@@ -30,10 +41,6 @@
 
 <main role="main" class="container">
   <section layout:fragment="corpo">
-    <div style="right: 40px; position: absolute">
-      <a th:href="@{/lang=pt)}"><img alt="" th:src="@{/img/Brasil.gif}" style="width: 50px;" /></a>
-      <a th:href="@{/lang=en)}"><img alt="" th:src="@{/img/EUA.gif}" style="width: 50px;" /></a>
-    </div>
   </section>
 </main>
 
